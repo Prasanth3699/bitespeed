@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useState, useCallback, useRef } from 'react';
 import {
   ReactFlow,
@@ -72,7 +73,7 @@ const FlowBuilder = () => {
   );
 
   // Handle node selection and show settings
-  const onNodeClick = useCallback(( node: Node) => {
+  const onNodeClick = useCallback((_event: React.MouseEvent, node: Node) => {
     setSelectedNodeId(node.id);
     setShowSettings(true);
     setSaveError('');
