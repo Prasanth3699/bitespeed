@@ -72,7 +72,7 @@ const FlowBuilder = () => {
   );
 
   // Handle node selection and show settings
-  const onNodeClick = useCallback((event: React.MouseEvent, node: Node) => {
+  const onNodeClick = useCallback(( node: Node) => {
     setSelectedNodeId(node.id);
     setShowSettings(true);
     setSaveError('');
